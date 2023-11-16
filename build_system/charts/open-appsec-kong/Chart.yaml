@@ -14,4 +14,4 @@ maintainers:
 name: open-appsec-kong
 sources:
 - https://github.com/Kong/charts/tree/main/charts/kong
-version: 2.36.1
+version: 2.36.2
