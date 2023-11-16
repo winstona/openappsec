@@ -174,7 +174,6 @@ spec:
         - --proxy
         - {{ .Values.appsec.proxy }}
       {{- end }}
-        imagePullPolicy: {{ .Values.appsec.image.pullPolicy }}
         env:
           - name: registered_server
             value: "Kong Server"
