@@ -1,7 +1,7 @@
 apiVersion: openappsec.io/v1beta1
 kind: Practice
 metadata:
-  name: {{ .fullName }}-appsec-best-practice
+  name: {{ include "kong.fullname" . }}-appsec-best-practice
 spec:
   web-attacks:
     override-mode: prevent-learn
@@ -17,7 +17,7 @@ spec:
 apiVersion: openappsec.io/v1beta1
 kind: LogTrigger
 metadata:
-  name: {{ .fullName }}-appsec-log-trigger
+  name: {{ include "kong.fullname" . }}-appsec-log-trigger
 spec:
   appsec-logging:
     detect-events: true
@@ -41,7 +41,7 @@ spec:
 apiVersion: openappsec.io/v1beta1
 kind: CustomResponse
 metadata:
-  name: {{ .fullName }}-403-forbidden
+  name: {{ include "kong.fullname" . }}-403-forbidden
 spec:
   mode: response-code-only ## configurable modes: {block-page|redirect|response-code-only}
   message-title: ""
